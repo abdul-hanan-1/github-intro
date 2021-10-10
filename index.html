@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <body class="w3-light-grey">
 <div class="w3-content" style="max-width:1400px">
 
@@ -37,90 +39,162 @@
     <div class="w3-container">
       <h2><b>Git Tutorial: How to Use Git {Beginner's Step-by-Step Guide}</b></h2>
       <p>Follow the steps below to get started using Git.</p>
-      <h3><b>Step 1: Install Git and Create a GitHub Account</b></h3>
-      <p> The first thing you need to do is to install Git and create a GitHub account.</p>
-      <p>After installing Git on your machine, the next step is to create a free GitHub account</p>
-      <p>Follow these steps:</p>
-      <ol>
-        <li><p>Visit the official account creation page: <a href="https://github.com/join"> Join Github</a></p></li>
-        <li> Pick a username, enter your email address, and choose a password.</li>
-        <li>Opt for or opt out of receiving updates and announcements by checking/unchecking the Email preferences checkbox.</li>
-        <li>Verify you're not a robot by solving the Captcha puzzle.</li>
-        <li> Click Create account.</li>
-        <img src="images/signup.png" alt="Nature" style="  display: block;margin-left: auto;margin-right: auto;width: 40%;height: 600px;">
-      </ol>
-      <h3><b>Step 2: Create a New Repository on GitHub</b></h3>
-      <p>GitHub allows you to keep track of your code when you're working with a team and need to modify the project's code collaboratively.</p>
-      <p>Follow these steps to create a new repository on GitHub:</p>
-      <ol>
-        <li> Log in and browse to the GitHub home page.</li>
-        <li>Find the New repository option under the + sign next to your profile picture, in the top right corner.</li>
-        <br>
-        <img src="images/new-repo.png" alt="Nature" style="  display: block;margin-left: auto;margin-right: auto;width: 40%;">
-        <br>
-        <li>Enter a name for your repository, provide a brief description, and choose a privacy setting.</li>
-        <br>
-        <img src="images/create-repo.png" alt="Nature" style="  display: block;margin-left: auto;margin-right: auto;width: 70%;">
-        <br>
-        <li>Click the Create repository button</li>
-      </ol>
-      <h3><b>Step 3: Clone the newly created repo to your local machine.</b></h3>
-      <p>Follow these steps to clone the newly created repo to your local machine.</p>
-      <ol>
-        <li>Copy the URL of your new repository.</li>
-        <br>
-        <img src="images/copy-url.png" alt="Nature" style="  display: block;margin-left: auto;margin-right: auto;width: 70%;">
-        <br>
-        <li>Open your Terminal and move to the directory where you want to clone the repo.</li>
-        <li>And run the command: <b>git clone repo-url</b></li>
-        <br>
-        <img src="images/git-clone.png" alt="Nature" style="  display: block;margin-left: auto;margin-right: auto;width: 70%;">
-        <br>
-        <li>Now move into the directory created by cloning repo.</li>
-        <br>
-        <img src="images/change-dir.png" alt="Nature" style="  display: block;margin-left: auto;margin-right: auto;width: 70%;">
-        <br>
-      </ol>
-      <h3><b>Step 4: Configure/add your github credentials for making change in your repo.</b></h3>
-      <p> Use the <b>git config user.email "your_email"</b>  and <b>git config user.name "your_username"</b> commands for this purpose.</p>
-      <img src="images/git-config.png" alt="Nature" style="  display: block;margin-left: auto;margin-right: auto;width: 70%;">
-      <h3><b>Step 5: Adding and commiting changes.</b></h3>
-      <p>Follow these steps to add changes and making them ready for pushing to remote repo.</p>
-      <ol>
-        <li>Add new files or make changes in existing files present in local repo folder</li>
-        <br>
-        <img src="images/repo-folder.png" alt="Nature" style="  display: block;margin-left: auto;margin-right: auto;width: 70%;">
-        <br>
-        <li>Use the <b>git add filename</b> for adding a specific file or <b>git add .</b> for adding all the changes made in all files.</li>
-        <li> And the run the <b>git commit -m "commit-message"</b> for commiting the local changes to be pushed to remote repo.</li>
-        <br>
-        <img src="images/git-add-commit.png" alt="Nature" style="  display: block;margin-left: auto;margin-right: auto;width: 70%;">
-        <br>
-      </ol>
-      <h3><b>Step 6: Pushing your local changes to the remote/central repo.</b></h3>
-      <p>Use the <b>git push origin [branchname]</b> command to push your changes to remote repo.<p>
-      <br>
-      <img src="images/git-push.png" alt="Nature" style="  display: block;margin-left: auto;margin-right: auto;width: 70%;">
-      <br>
-      <p>And then take a look at your remote repo you'll see your local changes are now present there.</p>
-      <br>
-      <img src="images/remote-repo-view.png" alt="Nature" style="  display: block;margin-left: auto;margin-right: auto;width: 70%;">
-      <br>
-      <h3><b>Step 7: Getting the remote changes with git pull.</b></h3>
-      <p>Suppose you make a change in your remote repo by editing it online in github.For example:</p>
-      <br>
-      <img src="images/online-edit.png" alt="Nature" style="  display: block;margin-left: auto;margin-right: auto;width: 70%;">
-      <br>
-      <p>Now if you want to get the remote changes in your local repo you need to run the <b>git pull</b> command.</p>
-      <p>Suppose you are working in your local environment and you don't know that the remote has changed so when you will push your local changes you will get an error and will be asked to first get the remote changes by <b>git pull</b>. See the picture below to get better understanding.</p>
-      <br>
-      <img src="images/git-pull.png" alt="Nature" style="  display: block;margin-left: auto;margin-right: auto;width: 70%;">
-      <br>
-      <p>And you can see that it has automatically merged your local changes with remote chaanges. And now you can push your changes succesfully.</p>
-      <br>
-      <img src="images/git-push-2.png" alt="Nature" style="  display: block;margin-left: auto;margin-right: auto;width: 70%;">
-      <br>
-
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <b>Step 1: Install Git and Create a GitHub Account</b>
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p> The first thing you need to do is to install Git and create a GitHub account.</p>
+          <p>After installing Git on your machine, the next step is to create a free GitHub account</p>
+          <p>Follow these steps:</p>
+          <ol>
+            <li><p>Visit the official account creation page: <a href="https://github.com/join"> Join Github</a></p></li>
+            <li> Pick a username, enter your email address, and choose a password.</li>
+            <li>Opt for or opt out of receiving updates and announcements by checking/unchecking the Email preferences checkbox.</li>
+            <li>Verify you're not a robot by solving the Captcha puzzle.</li>
+            <li> Click Create account.</li>
+            <img src="images/signup.png" alt="Nature" style="  display: block;margin-left: auto;margin-right: auto;width: 40%;height: 600px;">
+          </ol>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <b>Step 2: Create a New Repository on GitHub</b>
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                    <p>GitHub allows you to keep track of your code when you're working with a team and need to modify the project's code collaboratively.</p>
+                    <p>Follow these steps to create a new repository on GitHub:</p>
+                    <ol>
+                      <li> Log in and browse to the GitHub home page.</li>
+                      <li>Find the New repository option under the + sign next to your profile picture, in the top right corner.</li>
+                      <br>
+                      <img src="images/new-repo.png" alt="Nature" style="  display: block;margin-left: auto;margin-right: auto;width: 40%;">
+                      <br>
+                      <li>Enter a name for your repository, provide a brief description, and choose a privacy setting.</li>
+                      <br>
+                      <img src="images/create-repo.png" alt="Nature" style="  display: block;margin-left: auto;margin-right: auto;width: 70%;">
+                      <br>
+                      <li>Click the Create repository button</li>
+                    </ol>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <b>Step 3: Clone the newly created repo to your local machine.</b>
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                    <p>Follow these steps to clone the newly created repo to your local machine.</p>
+                    <ol>
+                      <li>Copy the URL of your new repository.</li>
+                      <br>
+                      <img src="images/copy-url.png" alt="Nature" style="  display: block;margin-left: auto;margin-right: auto;width: 70%;">
+                      <br>
+                      <li>Open your Terminal and move to the directory where you want to clone the repo.</li>
+                      <li>And run the command: <b>git clone repo-url</b></li>
+                      <br>
+                      <img src="images/git-clone.png" alt="Nature" style="  display: block;margin-left: auto;margin-right: auto;width: 70%;">
+                      <br>
+                      <li>Now move into the directory created by cloning repo.</li>
+                      <br>
+                      <img src="images/change-dir.png" alt="Nature" style="  display: block;margin-left: auto;margin-right: auto;width: 70%;">
+                      <br>
+                    </ol>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              <b>Step 4: Configure/add your github credentials for making change in your repo.</b>
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                    <p> Use the <b>git config user.email "your_email"</b>  and <b>git config user.name "your_username"</b> commands for this purpose.</p>
+                    <br>
+                    <img src="images/git-config.png" alt="Nature" style="  display: block;margin-left: auto;margin-right: auto;width: 70%;">
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              <b>Step 5: Adding and commiting changes.</b>
+            </button>
+          </h2>
+          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                    <p>Follow these steps to add changes and making them ready for pushing to remote repo.</p>
+                    <ol>
+                      <li>Add new files or make changes in existing files present in local repo folder</li>
+                      <br>
+                      <img src="images/repo-folder.png" alt="Nature" style="  display: block;margin-left: auto;margin-right: auto;width: 70%;">
+                      <br>
+                      <li>Use the <b>git add filename</b> for adding a specific file or <b>git add .</b> for adding all the changes made in all files.</li>
+                      <li> And the run the <b>git commit -m "commit-message"</b> for commiting the local changes to be pushed to remote repo.</li>
+                      <br>
+                      <img src="images/git-add-commit.png" alt="Nature" style="  display: block;margin-left: auto;margin-right: auto;width: 70%;">
+                      <br>
+                    </ol>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingSix">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+              <b>Step 6: Pushing your local changes to the remote/central repo.</b>
+            </button>
+          </h2>
+          <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                    <p>Use the <b>git push origin [branchname]</b> command to push your changes to remote repo.<p>
+                    <br>
+                    <img src="images/git-push.png" alt="Nature" style="  display: block;margin-left: auto;margin-right: auto;width: 70%;">
+                    <br>
+                    <p>And then take a look at your remote repo you'll see your local changes are now present there.</p>
+                    <br>
+                    <img src="images/remote-repo-view.png" alt="Nature" style="  display: block;margin-left: auto;margin-right: auto;width: 70%;">
+                    <br>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingSeven">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+              <b>Step 7: Getting the remote changes with git pull.</b>
+            </button>
+          </h2>
+          <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                    <p>Suppose you make a change in your remote repo by editing it online in github.For example:</p>
+                    <br>
+                    <img src="images/online-edit.png" alt="Nature" style="  display: block;margin-left: auto;margin-right: auto;width: 70%;">
+                    <br>
+                    <p>Now if you want to get the remote changes in your local repo you need to run the <b>git pull</b> command.</p>
+                    <p>Suppose you are working in your local environment and you don't know that the remote has changed so when you will push your local changes you will get an error and will be asked to first get the remote changes by <b>git pull</b>. See the picture below to get better understanding.</p>
+                    <br>
+                    <img src="images/git-pull.png" alt="Nature" style="  display: block;margin-left: auto;margin-right: auto;width: 70%;">
+                    <br>
+                    <p>And you can see that it has automatically merged your local changes with remote chaanges. And now you can push your changes succesfully.</p>
+                    <br>
+                    <img src="images/git-push-2.png" alt="Nature" style="  display: block;margin-left: auto;margin-right: auto;width: 70%;">
+                    <br>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>           
     </div>
   </div>
